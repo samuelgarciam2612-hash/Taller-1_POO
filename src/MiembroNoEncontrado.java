@@ -1,4 +1,4 @@
-public class MiembroNoEncontrado extends RuntimeException {
+public class MiembroNoEncontrado extends Exception {
     public MiembroNoEncontrado(String message) {
         super(message);
     }
