@@ -66,12 +66,10 @@ public class Miembro {
 
     @Override
     public String toString() {
-        return "Miembro{" +
-                "idMiembro ='" + idMiembro + '\'' +
-                ", nombre ='" + nombre + '\'' +
-                "Membresia = " + membresia +
-                '}';
+        return "{" +
+                "\n  idMiembro = '" + idMiembro + '\'' +
+                ",\n  nombre = '" + nombre + '\'' +
+                ",\n  membresia = " + get.membresia +
+                "\n}";
     }
-
-
 }

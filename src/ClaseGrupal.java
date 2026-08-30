@@ -14,10 +14,17 @@ public class ClaseGrupal implements Reservable {
         this.inscritos = new Miembro[cupoMaximo];
         this.contadorInscritos = 0;
     }
+    public int getContadorInscritos() {
+        return contadorInscritos;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
 
     @Override
     public void reservar(Miembro miembro) throws CupoAgotadoException, MembresiaVencidaException {
-        if (!miembro.tieneMembresiaValida()) { //para el booleano
+        if (!miembro.MembresiaValida()) { //para el booleano
             throw new MembresiaVencidaException("Tienes la membresia vencida, " + miembro.getNombre());
         }
 
@@ -50,4 +57,5 @@ public class ClaseGrupal implements Reservable {
         }
         return cancelarReserva(miembro.getIdMiembro()); //nos evita escribir todo lo de arriba de nuevo, lo ejecuta de nuevo automaticamente con IdMiembro
     }
+
 }

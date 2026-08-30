@@ -26,7 +26,7 @@ public final class GimnasioUtil {
 
         for (int i = 1; i < listaClases.length; i++) {
             if (listaClases[i] != null) {
-                if ( masSolicitada == null || listaClases[i].getNumeroInscritos() > masSolicitada .getNumeroInscritos()) {
+                if ( masSolicitada == null || listaClases[i].getContadorInscritos() > masSolicitada .getContadorInscritos()){
                     masSolicitada = listaClases[i];
                 }
             }
