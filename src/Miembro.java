@@ -4,9 +4,12 @@ public class Miembro {
     static int ContadorMiembros;
     private String idMiembro;
     private String nombre;
-    membresia :Membresia;
+    private Membresia membresia;
 
-    public Miembro(String idMiembro, String nombre, membresia Memebresia) {
+    public Miembro(String idMiembro, String nombre, Membresia membresia) {
+        this.idMiembro = idMiembro;
+        this.nombre = nombre;
+        this.membresia = membresia;
         ContadorMiembros++;
     }
 
@@ -30,6 +33,7 @@ public class Miembro {
 
     @Override
     public boolean equals(Object o) {
+        if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Miembro miembros = (Miembro) o;
         return Objects.equals(idMiembro, miembros.idMiembro) && Objects.equals(nombre, miembros.nombre);
@@ -68,5 +72,6 @@ public class Miembro {
                 "Membresia = " + membresia +
                 '}';
     }
+
 
 }
