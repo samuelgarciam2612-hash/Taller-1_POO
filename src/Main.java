@@ -32,7 +32,7 @@ public class Main {
         System.out.println("Costo con Membresía Anual: " + m1.calcularCostoClase(25000.0));
         System.out.println("Costo con Membresía Mensual: " + m4.calcularCostoClase(25000.0));
 
-        System.out.println("----- Recorrido Polimórficogit pull -----");
+        System.out.println("----- Recorrido Polimórfico -----");
         // guardar instancias hijas en el arreglo de la clase padre
         Membresia[] arregloMembresias = {m1, m2, m3, m4};
         for (Membresia mem : arregloMembresias) {
@@ -93,5 +93,4 @@ public class Main {
         System.out.println("----Ficha entrenador---- " + E1);
         System.out.println("Tiempo total acumulado en caminadora: " + caminadora.calcularTiempoTotalUso() + " mins");
     }
-
 }
