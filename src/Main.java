@@ -32,6 +32,20 @@ public class Main {
         System.out.println("Costo con Membresía Anual: " + m1.calcularCostoClase(25000.0));
         System.out.println("Costo con Membresía Mensual: " + m4.calcularCostoClase(25000.0));
 
+        System.out.println("----- Recorrido Polimórfico -----");
+        // guardar instancias hijas en el arreglo de la clase padre
+        Membresia[] arregloMembresias = {m1, m2, m3, m4};
+        for (Membresia mem : arregloMembresias) {
+            System.out.println("Membresia ID: " + mem.getIdMembresia() + " Costo por clase: " + mem.calcularCostoClase(25000.0));
+
+            if (mem instanceof MembresiaAnual) {
+                // pasamos el tipo padre a su tipo real hijo
+                MembresiaAnual membresiaAnual = (MembresiaAnual) mem;
+
+                // Al saber que es un plan anual le damos un beneficio
+                System.out.println("AVISO VIP: La membresía anual " + membresiaAnual.getIdMembresia() + " tiene acceso a zonas VIP.");
+            }
+        }
 
         Miembro[] listaMiembros = {P1, P2, P3, P4};
         int totalActivos = GimnasioUtil.contarMiembrosActivos(listaMiembros);
@@ -76,7 +90,7 @@ public class Main {
         System.out.println("---Ficha de los miembros---- " + P1);
         System.out.println("---Ficha de los miembros---- " + P2);
         System.out.println("----Estado de la maquna---- " + caminadora);
+        System.out.println("----Ficha entrenador---- " + E1);
         System.out.println("Tiempo total acumulado en caminadora: " + caminadora.calcularTiempoTotalUso() + " mins");
     }
-
 }

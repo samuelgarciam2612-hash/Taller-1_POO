@@ -30,6 +30,7 @@ public final class GimnasioUtil {
                     masSolicitada = listaClases[i];
                 }
             }
+
         }
         return masSolicitada;
         /*Primero que no sea nulo, tomar un punto de referencia, recorrer desde la primera posicion
