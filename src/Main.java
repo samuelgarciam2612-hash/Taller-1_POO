@@ -90,6 +90,7 @@ public class Main {
         System.out.println("---Ficha de los miembros---- " + P1);
         System.out.println("---Ficha de los miembros---- " + P2);
         System.out.println("----Estado de la maquna---- " + caminadora);
+        System.out.println("----Ficha entrenador---- " + E1);
         System.out.println("Tiempo total acumulado en caminadora: " + caminadora.calcularTiempoTotalUso() + " mins");
     }
 
